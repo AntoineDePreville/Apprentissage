@@ -1,51 +1,72 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\title{Électronique}
+\geometry{margin=2.5cm}
+\author{Antoine de Préville}
+
 \begin{document}
-    \title{Électronique}
+\maketitle
+\newpage
     J'utilise ici le livre d'*Électronique* rédigé par Jean-Daniel Chatelain et Roger Dessoulavy, du *Traité d'Électricité* publié sous la direction de Jacques Neirynck. J'utilise d'autres sources comme Wikipedia qui donne de bonnes informations. Si erreurs il y a, n'hésitez pas à me le faire savoir. Merci.
 
-    \section{Rappel des différents composants électroniques et leurs modèles}
+    \chapter{Rappel des différents composants électroniques et leurs modèles}
 
-        \subsection{Préambule}
-            Nous allons nous familiariser avec différents composants ert de leurs modèles en électronique mais d'abord définissions quelques éléments.
+        \section{Préambule}
+        Nous allons nous familiariser avec différents composants et de leurs modèles en électronique mais d'abord définissions quelques éléments.
 
-        \subsubsection{Définitions}
-        \begin{list}
-            \item Semiconducteur: Il s'agit d'un solide cristallin dont les propriétés de conduction électriques sont définies par deux bandes: la *bande de valence* à qui fait correspondre des électrons impliqués dans des liaisons covalentes, et la *bande de conduction* qui correspond à l'état excité des électrons et où ceux-ci peuvent se déplacer dans le cristal (d'où la conduction). Les deux bandes sont séparées par un gap qui correspond à un barrière d'énergie qui peut être franchie par une excitation extérieure. On parle de **semiconducteur intrinsèque** lorsqu'il est pur ou qu'il ne contient pas d'atome dopant.
-            \item Dopage (semiconducteurs): L'action d'ajouter des impuretés en petites quantités à une une cristal semiconducteur intrinsèque ou pur afin d'augmenter le nombre de porteurs libres. Il y a deux types de dopage:
-                \subitem  Le dopage P**: qui consiste à insérer un accepteur d'électrons (par rapport à la substance initiale donc un atome situé dans une colonne précédente dans le tableau périodique) dans le cristal semiconducteur. Cela va former un *trou* **p**ositivement chargé. L'insertion d'un atome accepteur d'électrons va former une pseudo-niveau d'énergie juste au-dessus de la bande de valeuce, ce qui entraîne la formation de trous.
-                \subitem  Le dopage N**: qui consiste à insérer un donneur d'électron (par rapport à la substance initiale donc un atome situé dans un colonne suivante dans le tableau périodique) dans le cristal semiconducteur. Cela va former une charge libre **n**égativement chargée. L'insertion d'un donneur d'électrons va faire apparaître un niveau d'énergie juste sous la bande de conduction, ce qui facilite l'excitation et par conséquent la conduction. [1]
-        \end{list}
+            \subsection{Définitions}
+                \begin{itemize}
+                    \item \textbf{Semiconducteur}: Il s'agit d'un solide cristallin dont les propriétés de conduction électriques sont définies par deux bandes: la \textit{bande de valence} à qui fait correspondre des électrons impliqués dans des liaisons covalentes, et la \textit{bande de conduction} qui correspond à l'état excité des électrons et où ceux-ci peuvent se déplacer dans le cristal (d'où la conduction). Les deux bandes sont séparées par un gap qui correspond à un barrière d'énergie qui peut être franchie par une excitation extérieure. On parle de \textbf{semiconducteur intrinsèque} lorsqu'il est pur ou qu'il ne contient pas d'atome dopant.
+                
+                    \item \textbf{Dopage}: L'action d'ajouter des impuretés en petites quantités à une une cristal semiconducteur intrinsèque ou pur afin d'augmenter le nombre de porteurs libres. Il y a deux types de dopage:
+                
+                        \subitem  Le dopage P**: qui consiste à insérer un accepteur d'électrons (par rapport à la substance initiale donc un atome situé dans une colonne précédente dans le tableau périodique) dans le cristal semiconducteur. Cela va former un *trou* **p**ositivement chargé. L'insertion d'un atome accepteur d'électrons va former une pseudo-niveau d'énergie juste au-dessus de la bande de valeuce, ce qui entraîne la formation de trous.
+                
+                        \subitem  Le dopage N**: qui consiste à insérer un donneur d'électron (par rapport à la substance initiale donc un atome situé dans un colonne suivante dans le tableau périodique) dans le cristal semiconducteur. Cela va former une charge libre **n**égativement chargée. L'insertion d'un donneur d'électrons va faire apparaître un niveau d'énergie juste sous la bande de conduction, ce qui facilite l'excitation et par conséquent la conduction. [1]
+                \end{itemize}
 
-        \subsubsection{Jonction pn}
-        Si chaque ensemble de porteurs (électrons et trous) se comporte comme un gaz, on peut considérer que les électrons diffusent de la région n vers la région p et inversément, de manière à utiliser tous l'espace à leur disposition. De ce fait ils créent une **zone de charge d'espace** ou zone de déplétion dans laquelle la charge volumique $\rho(x)$ n'est pas nulle, ainsi qu'un dipôle de part et d'autre de la jonction.
+            \subsection{Jonction pn}
+            Si chaque ensemble de porteurs (électrons et trous) se comporte comme un gaz, on peut considérer que les électrons diffusent de la région n vers la région p et inversément, de manière à utiliser tous l'espace à leur disposition. De ce fait ils créent une **zone de charge d'espace** ou zone de déplétion dans laquelle la charge volumique $\rho(x)$ n'est pas nulle, ainsi qu'un dipôle de part et d'autre de la jonction.
 
-        La zone de charge d'espace forme un champ électrique $E(x)$ partant des charge positives vers les charges négarives et ainsi la diffusion de trous et d'électrons s'arrête car ceux-ci n'ont pas assez d'énergie pour le franchir. Ce champ électrique dérive d'un potentiel $V(x)$ qui varie dans la zone de charge d'espace. Le seuil pour franchir la zone est désigné par $U_{b0}$ à l'équilibre thermodynamique. Ainsi, en appliquant une tension $U$ entre la région p et la région n peut avoir un incident. une tension négative a pour effet d'augmenter la barrière énergétique générée par le champ électrique tandis qu'une tension $U > 0$ diminue cet écart. [2]
+            La zone de charge d'espace forme un champ électrique $E(x)$ partant des charge positives vers les charges négarives et ainsi la diffusion de trous et d'électrons s'arrête car ceux-ci n'ont pas assez d'énergie pour le franchir. Ce champ électrique dérive d'un potentiel $V(x)$ qui varie dans la zone de charge d'espace. Le seuil pour franchir la zone est désigné par $U_{b0}$ à l'équilibre thermodynamique. Ainsi, en appliquant une tension $U$ entre la région p et la région n peut avoir un incident. une tension négative a pour effet d'augmenter la barrière énergétique générée par le champ électrique tandis qu'une tension $U > 0$ diminue cet écart. [2]
 
-        \subsection{Diode à jonction}
+            \subsection{Diode à jonction}
 
-        \subsubsection{Définitions}
-            \begin{list}
-                \item Diode**: dipôle non linéaire et polarisé qui ne laisse passer le courant que dans un sens.
-                \item Diode à jonction**: Dispositif comportant une jonction pn dont les régions p et n sont reliées à deux bornes. La tensions appliquée à ces bornes agit directement sur le champ de rétension de la diffusion et permet le contrôle du courant traversant la diode.
-                \item Diode théorique**: est une diode qui correspond à la caractéristique exponentielle donnée par la relation 
-                \item Courant inverse de saturation**: le courant $I$ qui circulerait en sens inverse de la diode théorique polarisée par une tension $U =-\infty$. Il dépend de la température selon la relation
-            \end{list}
+                \subsubsection{Définitions}
+                    \begin{itemize}
+                        \item \textbf{Diode}: dipôle non linéaire et polarisé qui ne laisse passer le courant que dans un sens.
+                        \item \textbf{Diode à jonction}: Dispositif comportant une jonction pn dont les régions p et n sont reliées à deux bornes. La tensions appliquée à ces bornes agit directement sur le champ de rétension de la diffusion et permet le contrôle du courant traversant la diode.
+                        \item \textbf{Diode théorique}: est une diode qui correspond à la caractéristique exponentielle donnée par la relation 
+                        \item \textbf{Courant inverse de saturation}: le courant $I$ qui circulerait en sens inverse de la diode théorique polarisée par une tension $U =-\infty$. Il dépend de la température selon la relation
+                    \end{itemize}
 
 
-            \begin{math}
-                I_s \sim T³exp(\Delta W_0/k_BT)
-            \end{math}
+                        \begin{equation}
+                            I_s \sim T³exp(\Delta W_0/k_BT)
+                        \end{equation}
         
+                \subsubsection{Fonctionnement}
+                    Une anode (A) est reliée à la région p et la cathode (C) est reliée à la région n le courant $I$ et la tensions $U= U_{AC}$ vont de l'anode vers la cathode. Le courant est lié à la tension par la relation 
 
-        \subsubsection{Fonctionnement}
-            Une anode (A) est reliée à la région p et la cathode (C) est reliée à la région n le courant $I$ et la tensions $U= U_{AC}$ vont de l'anode vers la cathode. Le courant est lié à la tension par la relation 
+                    \begin{equation}
+                        I = I_s[exp(U/nU_T)-1]
+                    \end{equation}
 
-            \begin{equation}
-                I = I_s[exp(U/nU_T)-1]
-            \end{equation}
-
-    \section{Références}
-        [1] Wikipedia [en ligne]. [cité le 19 août 2025]. Disponible: https://fr.wikipedia.org/wiki/Dopage_(semi-conducteur)
-
-        [2] Wikipedia [en ligne]. [cité le 19 août 2025]. Disponible: https://fr.wikipedia.org/wiki/Jonction_p-n
+    \begin{thebibliography}
+        @online{Wikipedia,
+            author = {Wikipedia}
+            title = {Dopage},
+            url = {https://fr.wikipedia.org/wiki/Dopage_(semi-conducteur)},
+            urldate = {2025-08-19}
+        }
+        
+        @online{Wikipedia,
+            author = {Wikipedia}
+            title = {Jonction pn},
+            url = {https://fr.wikipedia.org/wiki/Jonction_p-n},
+            urldate = {2025-08-19}
+        }
+    \end{thebibliography}
 
 \end{document}
