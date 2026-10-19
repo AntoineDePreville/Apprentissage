@@ -1,0 +1,15 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'electronique.blg'
+[80] biber:340> INFO - === Wed Sep 16, 2026, 21:11:19
+[95] Biber.pm:419> INFO - Reading 'electronique.bcf'
+[154] Biber.pm:979> INFO - Found 2 citekeys in bib section 0
+[166] Biber.pm:4419> INFO - Processing section 0
+[176] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[177] bibtex.pm:1713> INFO - LaTeX decoding ...
+[179] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[188] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[188] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[188] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'fr-FR'
+[188] Biber.pm:4245> INFO - No sort tailoring available for locale 'fr-FR'
+[190] bbl.pm:660> INFO - Writing 'electronique.bbl' with encoding 'UTF-8'
+[191] bbl.pm:763> INFO - Output to electronique.bbl
